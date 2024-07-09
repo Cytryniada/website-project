@@ -1,0 +1,94 @@
+@keyframes floating {
+    0% {
+        top: 1%;
+    }
+    50% {
+        top: 3%;
+    }
+    100% {
+        top: 1%;
+    }
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+#bg {
+    background-image: url("backgr.jpg");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    backdrop-filter: blur(100px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+}
+#blur {
+    background-color: rgba(44, 166, 214, 0.3);
+    backdrop-filter: blur(3px);
+    height: 100%;
+
+}
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-weight: bold;
+    height: 70px;
+    width: 30%;
+    border-radius: 10px;
+    border: 5px groove rgb(3, 96, 172);
+    color: black;
+    background-color: rgb(82, 82, 82);
+    mix-blend-mode: screen;
+    position: absolute;
+    left: 35%;
+    text-shadow: 2px 0px blue, 0px 2px lightblue;
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+nav {
+    position: absolute;
+    right: 0.3%;
+    height: 40%;
+    top: 30%;
+    width: 4%;
+    border-radius: 3%;
+    background-color: rgba(255,255,255,0.5);
+    overflow-y: scroll;
+    overflow-x: visible;
+    overflow: repeat;
+    scrollbar-width: none;
+    transition: width 1s;
+    z-index: -1;
+    scroll-behavior: smooth;
+}
+
+nav:hover {
+    outline: 2px solid white;
+    width: 6%;
+}
+
+ul{
+    list-style-type: none;
+    list-style-position: outside;
+    padding-left: 10px;
+}
+li {
+    margin-top: 10px;
+    text-align: center;
+}
+
+a img {
+    transition: right 1s, height 1s;
+}
+
+a img:hover {
+    position: relative;
+    right: 10%;
+    height: 110px;
+    cursor: pointer;
+    z-index: 10;
+}
